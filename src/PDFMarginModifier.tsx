@@ -51,8 +51,8 @@ const PDFMarginModifier: React.FC = () => {
             page.setMediaBox(
                 0 - leftMargin,
                 0 - bottomMargin,
-                width + rightMargin,
-                height + topMargin
+                width + rightMargin + leftMargin,
+                height + topMargin + bottomMargin
             );
         });
 
