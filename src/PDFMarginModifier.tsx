@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { PDFDocument } from 'pdf-lib';
 import { save } from '@tauri-apps/api/dialog';
-import { writeBinaryFile, BaseDirectory } from '@tauri-apps/api/fs';
+import { writeBinaryFile } from '@tauri-apps/api/fs';
 
 const PDFMarginModifier: React.FC = () => {
     const [topMargin, setTopMargin] = useState(0);
@@ -58,7 +58,7 @@ const PDFMarginModifier: React.FC = () => {
 
         // Save the modified PDF
         const pdfBytes = await originalPdfDoc.save();
-        const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+        //const blob = new Blob([pdfBytes], { type: 'application/pdf' });
 
         // Trigger download of the modified PDF
         // const link = document.createElement('a');
