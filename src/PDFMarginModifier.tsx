@@ -54,6 +54,12 @@ const PDFMarginModifier: React.FC = () => {
                 width + rightMargin + leftMargin,
                 height + topMargin + bottomMargin
             );
+            page.setCropBox(
+                0 - leftMargin,
+                0 - bottomMargin,
+                width + rightMargin + leftMargin,
+                height + topMargin + bottomMargin
+            );
         });
 
         // Save the modified PDF
